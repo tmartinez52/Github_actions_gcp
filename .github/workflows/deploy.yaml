@@ -16,7 +16,7 @@ jobs:
     - name: Login and setup cloud SDK
       uses: google-github-actions/setup-gcloud@master
       with:
-        project_id: ${{ secrets.GCP_PROJECT}}
+        project_id: ${{ secrets.GCP_PROJECT }}
 	service_account_email: ${{ secrets.GCP_EMAIL }}
 	service_account_key: ${{ secrets.GCP_CREDENTIALS }}
 	export_default_credentials: true
