@@ -22,4 +22,4 @@ jobs:
         export_default_credentials: true
 
     - name: Create Project
-      run: gcloud projects create ${{secrets.PROJECT_ID}}
+      run: gcloud config list
