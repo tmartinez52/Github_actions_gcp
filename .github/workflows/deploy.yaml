@@ -22,4 +22,7 @@ jobs:
         export_default_credentials: true
 
     - name: Create Project
-      run: gcloud projects list
+      run: gcloud projects create actions30052
+      
+    - name: Move to project
+      run: gcloud config set project actions30052
