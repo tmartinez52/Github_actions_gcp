@@ -17,9 +17,9 @@ jobs:
       uses: google-github-actions/setup-gcloud@master
       with:
         project_id: ${{ secrets.GCP_PROJECT }}
-	service_account_email: ${{ secrets.GCP_EMAIL }}
-	service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-	export_default_credentials: true
+        service_account_email: ${{ secrets.GCP_EMAIL }}
+        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+        export_default_credentials: true
 	
-   - name: Create Project
-     run: gcloud projects create ${{secrets.PROJECT_ID}}
+    - name: Create Project
+      run: gcloud projects create ${{secrets.PROJECT_ID}}
