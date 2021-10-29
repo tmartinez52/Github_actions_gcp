@@ -1,0 +1,25 @@
+name: Build Google Project
+on: 
+	push:
+		branches: [main]
+
+jobs:
+	provision-project:
+		name: Provision Environment
+		enviornment: 
+		runs-on: ubuntu-latest
+		
+		steps:
+		- name: Checkout
+			uses: actions/checkout@v2
+
+		- name: Login and setup cloud SDK
+			uses: google-github-actions/setup-gcloud@master
+			with:
+				project_id:
+				service_account_email:
+				service_account_key:
+				export_default_credentials:
+
+		- name: Create Project
+			run: gcloud projects create ${{secrets.PROJECT_ID}}
