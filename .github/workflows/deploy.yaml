@@ -6,7 +6,7 @@ on:
 jobs:
   provision-project:
     name: Provision Environment
-    enviornment: production
+    environment: production
     runs-on: ubuntu-latest
     
     steps:
